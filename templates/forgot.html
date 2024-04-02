@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>reset password</title>
+</head>
+<body>
+    <center>
+        <form method="post">
+
+            <label >NewPassword:</label>
+            <input type="password" name="npwd" ><br><br>
+            <label >ConfirmPassword:</label>
+            <input type="password" name="cpwd" ><br><br>
+            <button>submit</button>
+
+        </form>
+    </center>
+</body>
+{% with messages = get_flashed_messages() %}
+  {% if messages %}
+    <ul class=flashes>
+    {% for message in messages %}
+     <center> {{ message }} </center>
+    {% endfor %}
+    </ul>
+  {% endif %}
+{% endwith %}
+</html>
